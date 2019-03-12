@@ -10,10 +10,9 @@ VOLUME ["/gitbook"]
 
 WORKDIR /gitbook
 
-RUN npm install -g npm &&\
-    npm install -g gitbook-cli && \
+RUN yarn global add gitbook-cli && \
     gitbook fetch ${VERSION} && \
-    npm cache clear --force && \
+    yarn cache clean && \
     rm -rf /tmp/* && \
     sed -i.bak 's/confirm: true/confirm: false/g' \
     /root/.gitbook/versions/${VERSION}/lib/output/website/copyPluginAssets.js
