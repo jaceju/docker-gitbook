@@ -8,13 +8,13 @@ Read the official [GitBook Toolchain Documentation](http://toolchain.gitbook.com
 
 ```bash
 # init
-docker run --rm -v "$PWD:/gitbook" -p 4000:4000 jaceju/gitbook gitbook init
+docker run --rm -v "$PWD:/gitbook" jaceju/gitbook gitbook init [<doc_folder>]
 # install
-docker run --rm -v "$PWD:/gitbook" -p 4000:4000 jaceju/gitbook gitbook install
+docker run --rm -v "$PWD:/gitbook" jaceju/gitbook gitbook install [<doc_folder>]
 # serve
-docker run --rm -v "$PWD:/gitbook" -p 4000:4000 jaceju/gitbook gitbook serve
+docker run -d --rm -v "$PWD:/gitbook" -p 4000:4000 jaceju/gitbook gitbook serve [<doc_folder>]
 # build
-docker run --rm -v "$PWD:/gitbook" -p 4000:4000 jaceju/gitbook gitbook build
+docker run --rm -v "$PWD:/gitbook" jaceju/gitbook gitbook build [<doc_folder>] [<target_folder>]
 ```
 
 For short, you can use alias for the long command line text. Place the alias statement in your `.bashrc` or `.zshrc`.
@@ -29,6 +29,12 @@ gitbook serve
 gitbook build
 # pdf output
 gitbook pdf .
+```
+
+## Build Docker Image
+
+```
+docker build --no-cache -t jaceju/gitbook:3.2.3 --build-arg VERSION=3.2.3 .
 ```
 
 ## License
