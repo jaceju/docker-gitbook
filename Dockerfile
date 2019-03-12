@@ -1,8 +1,6 @@
 FROM node:10-alpine
 
-USER root
-
-ARG VERSION=3.2.2
+ARG VERSION=3.2.3
 
 LABEL version=$VERSION
 
@@ -19,4 +17,4 @@ RUN yarn global add gitbook-cli && \
 
 EXPOSE 4000
 
-CMD ["/usr/local/bin/gitbook", "--help"]
+ENTRYPOINT [ "/usr/local/bin/gitbook" ]
