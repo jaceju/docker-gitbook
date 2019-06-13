@@ -4,7 +4,7 @@ A Docker Container for [gitbook](https://github.com/GitbookIO/gitbook). Inspired
 
 ## Usage
 
-Read the official [GitBook Toolchain Documentation](http://toolchain.gitbook.com/) documentation [GitbookIO/gitbook](https://github.com/GitbookIO/gitbook#how-to-use-it) first.
+Read the official [GitBook Toolchain Documentation](http://toolchain.gitbook.com/) and [GitbookIO/gitbook](https://github.com/GitbookIO/gitbook#how-to-use-it) first.
 
 ```bash
 # init
